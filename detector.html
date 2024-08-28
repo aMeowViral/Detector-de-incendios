@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link href="style.css" rel="stylesheet">
+    <title>DetFire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="imagenes-de-adorno">
+      <img src="imagenes/Decoracion1.png" alt="Imagen 1" class="imagen-1">
+      <img src="imagenes/Decoracion2.png" alt="Imagen 2" class="imagen-2">
+      <img src="imagenes/Decoracion3.png" alt="Imagen 3" class="imagen-3">
+      <img src="imagenes/Decoracion1.png" alt="Imagen 4" class="imagen-4">
+      <!-- Agrega más imágenes según sea necesario -->
+  </div>
+    <div id="Encabezado">
+      <img src="imagenes/LogoDetFire-SinFondo.png" alt="">
+    </div>
+    
+    <div id="DetInc">
+      <h1>Detector de Incendios</h1>
+      <hr class="custom-line">
+    </div>
+    
+    <main>
+        <div id="cuadro-transparente-camara">
+          <div id="Camara">
+            <video id="video" playsinline autoplay style="width: 1px;"></video>
+            <canvas id="canvas" width="400" height="400" style="max-width: 100%;"></canvas>
+            <canvas id="otrocanvas" width="150" height="150" style="display: none"></canvas>
+            <br>
+            <button id="cambiar-camara" onclick="cambiarCamara();">Cambiar camara</button>
+            <p>Procesando...</p>
+            <div id="resultado"></div>            
+          </div>
+        </div>
+    </main>
+<br>
+
+    <div id="BotonesRegIni">
+      <button id="Regresar">Regresar</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="detector.js"> </script>
+
+  </body>
+</html>
